@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D95A8316-1E49-4A22-8700-22FF159E88C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesktopTestApp</RootNamespace>
+    <AssemblyName>DesktopTestApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>E:\Visual Studio Cool UI\Bunifu_UI - Dllme\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Lecturer Components\LecturerRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\LecturerRegister.Designer.cs">
+      <DependentUpon>LecturerRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\LogoutTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\LogoutTab.Designer.cs">
+      <DependentUpon>LogoutTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\MyAccountTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\MyAccountTab.Designer.cs">
+      <DependentUpon>MyAccountTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\SelectTestTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\SelectTestTab.Designer.cs">
+      <DependentUpon>SelectTestTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\StudentResultsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\StudentResultsTab.Designer.cs">
+      <DependentUpon>StudentResultsTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\AddQuestionTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\AddQuestionTab.Designer.cs">
+      <DependentUpon>AddQuestionTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\AddTestTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\AddTestTab.Designer.cs">
+      <DependentUpon>AddTestTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\CreateTestTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\CreateTestTab.Designer.cs">
+      <DependentUpon>CreateTestTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\TestMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\TestMenu.Designer.cs">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\QuestionMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Editor Components\QuestionMenu.Designer.cs">
+      <DependentUpon>QuestionMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Viewer Components\ListTestTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Viewer Components\ListTestTab.Designer.cs">
+      <DependentUpon>ListTestTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Viewer Components\QuestionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Viewer Components\QuestionPanel.Designer.cs">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Viewer Components\TestName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Viewer Components\TestName.Designer.cs">
+      <DependentUpon>TestName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Viewer Components\ViewTestTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\Test Viewer Components\ViewTestTab.Designer.cs">
+      <DependentUpon>ViewTestTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\TestDatabaseTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\TestDatabaseTab.Designer.cs">
+      <DependentUpon>TestDatabaseTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecturerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerLogin.Designer.cs">
+      <DependentUpon>LecturerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer Components\LecturerPortal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer Components\LecturerPortal.Designer.cs">
+      <DependentUpon>LecturerPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecturerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerMain.Designer.cs">
+      <DependentUpon>LecturerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\Student FeedBack Components\MemoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\Student FeedBack Components\MemoPanel.Designer.cs">
+      <DependentUpon>MemoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\Student Test Components\QuestionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\Student Test Components\QuestionPanel.Designer.cs">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentLogin.Designer.cs">
+      <DependentUpon>StudentLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\Select Test Components\SelectTestTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\Select Test Components\SelectTestTab.Designer.cs">
+      <DependentUpon>SelectTestTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\StudentAccountTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\StudentAccountTab.Designer.cs">
+      <DependentUpon>StudentAccountTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\Student FeedBack Components\StudentFeedbackTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\Student FeedBack Components\StudentFeedbackTab.Designer.cs">
+      <DependentUpon>StudentFeedbackTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\StudentResultsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\StudentResultsTab.Designer.cs">
+      <DependentUpon>StudentResultsTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\Select Test Components\TestContentMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\Select Test Components\TestContentMenu.Designer.cs">
+      <DependentUpon>TestContentMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\Student Test Components\StudentTestTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\Student Test Components\StudentTestTab.Designer.cs">
+      <DependentUpon>StudentTestTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMain.Designer.cs">
+      <DependentUpon>StudentMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseConn.cs" />
+    <Compile Include="WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Components\StudentPortal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Components\StudentPortal.Designer.cs">
+      <DependentUpon>StudentPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lecturer Components\LecturerRegister.resx">
+      <DependentUpon>LecturerRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\LogoutTab.resx">
+      <DependentUpon>LogoutTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\MyAccountTab.resx">
+      <DependentUpon>MyAccountTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\SelectTestTab.resx">
+      <DependentUpon>SelectTestTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\StudentResultsTab.resx">
+      <DependentUpon>StudentResultsTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Editor Components\AddQuestionTab.resx">
+      <DependentUpon>AddQuestionTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Editor Components\AddTestTab.resx">
+      <DependentUpon>AddTestTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Editor Components\CreateTestTab.resx">
+      <DependentUpon>CreateTestTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Editor Components\TestMenu.resx">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Editor Components\QuestionMenu.resx">
+      <DependentUpon>QuestionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Viewer Components\ListTestTab.resx">
+      <DependentUpon>ListTestTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Viewer Components\QuestionPanel.resx">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Viewer Components\TestName.resx">
+      <DependentUpon>TestName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\Test Viewer Components\ViewTestTab.resx">
+      <DependentUpon>ViewTestTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\TestDatabaseTab.resx">
+      <DependentUpon>TestDatabaseTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerLogin.resx">
+      <DependentUpon>LecturerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Components\LecturerPortal.resx">
+      <DependentUpon>LecturerPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerMain.resx">
+      <DependentUpon>LecturerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\Student FeedBack Components\MemoPanel.resx">
+      <DependentUpon>MemoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\Student Test Components\QuestionPanel.resx">
+      <DependentUpon>QuestionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentLogin.resx">
+      <DependentUpon>StudentLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\Select Test Components\SelectTestTab.resx">
+      <DependentUpon>SelectTestTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\StudentAccountTab.resx">
+      <DependentUpon>StudentAccountTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\Student FeedBack Components\StudentFeedbackTab.resx">
+      <DependentUpon>StudentFeedbackTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\StudentResultsTab.resx">
+      <DependentUpon>StudentResultsTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\Select Test Components\TestContentMenu.resx">
+      <DependentUpon>TestContentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\Student Test Components\StudentTestTab.resx">
+      <DependentUpon>StudentTestTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentMain.resx">
+      <DependentUpon>StudentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Components\StudentPortal.resx">
+      <DependentUpon>StudentPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentPtlDefault.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentPtlChange.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LecturerPtlChange.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LecturerPtlDefault.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesktopTestAppDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DesktopTestAppDB_log.ldf">
+      <DependentUpon>DesktopTestAppDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Correct.png" />
+    <Content Include="Resources\Wrong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
